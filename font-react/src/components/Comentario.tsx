@@ -5,6 +5,6 @@ type PropriedadesComentarios = {
 
 export function Comentario(props: PropriedadesComentarios){
     return(
-        <h3>{props.text}</h3>
+        <li>{props.text}</li>
     );
 }
