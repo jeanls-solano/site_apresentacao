@@ -1,5 +1,12 @@
+import { useState } from "react/cjs/react.production.min"
+import { AppRoutes } from "./Routes"
+
 function App(){
-  return <h1>Tudo OK</h1>
+  return (
+  <AppRoutes>
+    
+  </AppRoutes>
+  )
 }
 
 export default App
