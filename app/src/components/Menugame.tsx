@@ -10,18 +10,22 @@ export function Menugame(){
     function selectHero(){
         setSelectedHero(true)
     }
+    useState(() =>{
+        selectHero
+    })
+    
 
     return(
         <React.Fragment>
             <h1>Menu</h1>
             <form className='game-hero' onSubmit={selectHero}>
-                <button onClick={(e) => setHero("sonic2")}>hero 1</button>
-                <button onClick={(e) => setHero("sonic")}>hero 2</button>
-                    <button onClick={(e) => setHero("goku")}>hero 3</button>
+                <button onClick={(e) => selectHero()}>hero 1</button>
+                <button onClick={(e) => selectHero()}>hero 2</button>
+                <button onClick={(e) => selectHero()}>hero 3</button>
             </form>
-            {selectedHero ? <Hero text={hero}/> : null}
             <Game/>
         </React.Fragment>
     )
 
 }
+// {selectedHero ? <Game/> : null}
